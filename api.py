@@ -15,9 +15,9 @@ def predict():
     
      
     data = pd.read_csv(request.files.get('file'))
-    
+    val = pd.read_csv('test2.csv', index_col=0)
     from sklearn.metrics import roc_auc_score
-    y_true = data['SeriousDlqin2yrs'] 
+    y_true = val['SeriousDlqin2yrs'] 
     y_scores = data['Predictions'] 
     auc = roc_auc_score(y_true, y_scores)
 

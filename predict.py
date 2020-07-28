@@ -31,7 +31,7 @@ model.fit(X_train, y_train)
 y_prediction = model.predict(X_test)
 
 
-predictions = pd.DataFrame({'SeriousDlqin2yrs' : y_test, 'Predictions' : y_prediction})    
+predictions = pd.DataFrame({'Predictions' : y_prediction})    
 
 
 predictions.to_csv(r'test2-predictions.csv')
